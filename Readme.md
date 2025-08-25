@@ -64,7 +64,7 @@ Con el fin de construir la imagen.
 Luego, es creado el contenedor de reader con ayuda del siguiente comando.
 
 ````
-sudo docker run -d --name reader -v volume:/data -v $(pwd)/backup reader
+sudo docker run -d --name reader -v volume:/data -v $(pwd):/backup reader
 ````
 * Se establece un punto de montura que apunta a la carpeta actual del host (pwd), todo lo que se escriba en /backup dentro del contenedor persistirá y se verá en la carpeta actual del host gracias a dicho volumen.
 
