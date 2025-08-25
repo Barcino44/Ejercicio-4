@@ -17,7 +17,6 @@ do
     date >> /data/timestamp.log
     sleep 10
 done
-
 ````
 Este script crea en un archivo timestamp.log que va imprimiendo la fecha cada 10 segundos.
 
