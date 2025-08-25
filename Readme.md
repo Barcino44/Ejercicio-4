@@ -75,7 +75,7 @@ sudo docker exec -it reader /bin/bash
 ````
 Al interior del contenedor en la carpeta la ``/data`` visualizo la existencia de timestamp.log y su constante actualización gracias al contenedor writer.
 
-Posteriormente, al interior del contendeor se ejecuta.
+Posteriormente, al interior del contenedor se ejecuta.
 
 ````
 tar czf /backup/volume-backup.tar.gz -C /data .
@@ -97,7 +97,7 @@ Se accede al contenedor.
 ````
 sudo docker exec -it othervol /bin/bash
 ````
-Al interior del contedor se ejecuta.
+Al interior del contenedor se ejecuta.
 
 ````
 sh -c "cd /data && tar xzf /backup/volume-backup.tar.gz"
