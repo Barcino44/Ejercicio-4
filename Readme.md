@@ -90,7 +90,7 @@ sudo docker create volume othervol
 Creo un contenedor usando por ejemplo la imagen de reader para copiar los datos del backup al otro volumen.
 
 ````
-sudo docker run -d --name othervol -v othervol:/data -v $(pwd)/backup reader
+sudo docker run -d --name othervol -v othervol:/data -v $(pwd):/backup reader
 ````
 Se accede al contenedor.
 
@@ -100,7 +100,7 @@ sudo docker exec -it othervol /bin/bash
 Al interior del contedor se ejecuta.
 
 ````
-sh -c "cd /data && tar xzf /backup/mi_vol_backup.tar.gz"
+sh -c "cd /data && tar xzf /backup/volume-backup.tar.gz"
 ````
 De esta manera la información del volumen backup se copia y se descomprime en el punto de montaje de othervol.
 
